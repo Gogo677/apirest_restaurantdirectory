@@ -3,7 +3,10 @@ Se crea una resfull-API para listar restaurantes.
 La actual versión solo contiene los métodos: 
 ## /restaurants
 * GET para obtener el listado de restaurantes
-* POST para insertar un restaurante
+* POST para insertar un restaurante (requiere credenciales de usuario registrado)
+## /restaurants/id
+* PUT para editar la información de un restaurante (requiere credenciales de usuario registrado)
+* DELETE para eliminar la información de un restaurante (requiere credenciales de usuario registrado)
 ## /users
 * POST para registrar nuevos usuarios
 ## /auth
