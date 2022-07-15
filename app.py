@@ -102,5 +102,34 @@ def create_task():
   return jsonify({'Message':'Restaurant added successfully', 'Values': request.json}) 
 
 
+# Crear usuario
+@app.route('/users',methods=['POST'])
+def create_user():
+    username= request.json['username']
+    email=request.json['email']
+    password=request.json['password']
+
+    new_user = User(username, email, password)
+
+    db.session.add(new_user)
+    db.session.commit()
+
+    return jsonify({"Message":'User added successfully'})
+
+# Autentificar usuario
+@app.route('/auth',methods=['POST'])
+def auth_user():
+    username = request.json['username']
+    password = request.json['password']
+    print(username,password)
+
+    us=User.query.filter_by(username=username,password=password).first()
+
+    print(us)
+    if us is not None:
+        return jsonify({"Message":'User exist'})
+    else:
+        return jsonify({"Message":'Failed authenticade user'})    
+
 if __name__ == "__main__":
     app.run(debug=True,port=4000)
