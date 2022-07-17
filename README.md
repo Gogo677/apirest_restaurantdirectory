@@ -1,5 +1,7 @@
 # RESTFULL-API directorio de restaurantes
 Se crea una resfull-API para listar restaurantes.
+
+## Esta versión usa ejemplo de conexión a SQL server
 La actual versión solo contiene los métodos: 
 ## /restaurants
 * GET para obtener el listado de restaurantes
@@ -12,4 +14,4 @@ La actual versión solo contiene los métodos:
 ## /auth
 * POST para autentificar usuarios existentes
 
-Fue implementado para usarse con una base de datos SQLserver o MySQL en Python usando Flask, SQLalchemy y marshmallow.
+Fue implementado para usarse con una base de datos SQLserver en Python usando Flask, SQLalchemy y marshmallow.
