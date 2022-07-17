@@ -8,10 +8,10 @@ app = Flask(__name__)
 # Configuracion de motor de base de datos
 
 #------Configuracion para Microsoft SQL server-----------
-#app.config['SQLALCHEMY_DATABASE_URI'] ='mssql+pymssql://username:password@hostname:port/dbname'
+app.config['SQLALCHEMY_DATABASE_URI'] ='mssql+pyodbc://sa:wafchick@DESKTOP-NDV1U5J/apirest_prueba1?driver=SQL+Server'
 
 #Configuracion para MYSQL
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/apiprueba'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost/apiprueba'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # !!!!----- Nota: la base de datos ya debe estar creada, las tablas las generara despues si no existen------!!!!
 
